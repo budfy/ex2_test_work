@@ -9,44 +9,55 @@ html(lang="en")
       .topscreen__title-wrapper
         h2.topscreen__title Referral Program
         .topscreen__img-top
-        img(src="img/exchange-copy.svg", alt="Exchange")
+          img(src="img/exchangeCopy.svg", alt="Exchange")
       .topscreen__content-wrapper
         .topscreen__text-wrapper
           p.topscreen__text Each trading pair is a dedicated microservice written in go that is capable to run more than a million transactions per a second. We use in-memory storage to store all operations and our own data storage system to handle fast trading operations.
-          a.topscreen__link(href="#") Take answer below
+          a.topscreen__link(href="#form-section") Take answer below
         .topscreen__img-wrapper
           img(src="img/mainpicture.png", alt="Main picture")
-    section.form-section
+    section.form-section#form-section
       .container
-        form(action="")
-          .form-block__wrapper
-            h3.form__title What is the desired percentage of the reward for the inviting user?
-            input#percentage-1(type="radio", name="percentage")
-            label(for="percentage-1") 50%
-            input#percentage-2(type="radio", name="percentage")
-            label(for="percentage-2") 50%
-            input#percentage-3(type="radio", name="percentage")
-            label(for="percentage-3") 50%
-            input#percentage-4(type="radio", name="percentage")
-            label(for="percentage-4")
-              input#user__val-1(type="text", placeholder="Your variant" name="user__val-1")
-              label(for="user__val-1")
-          .form-block__wrapper
-            h3.form__title How many levels of the referral program are needed?
-            input#level-1(type="radio", name="level")
-            label(for="level-1") 1
-            input#level-2(type="radio", name="level")
-            label(for="level-2") 2
-            input#level-3(type="radio", name="level")
-            label(for="level-3") 3
-            input#level-4(type="radio", name="level")
-            label(for="level-4") 
-              input#user__val-2(type="text", placeholder="Your variant" name="user__val-2")
-              label(for="user__val-1")
-          .form-block__wrapper
-            span.form__description Take your email and we give you beta version our exchange wallet
-            input#email(type="email", placeholder="Your Email", name="email")
-            button(type="submit") Done
+        .form__wrapper
+          form(action="" name="referral" onsubmit="valid()")
+            .form-block__wrapper
+              h3.form__title What is the desired percentage of the reward for the inviting user?
+              label.radio__btn
+                input#percentage-1(type="radio", name="percentage")
+                .radio__text 50%
+              label.radio__btn
+                input#percentage-2(type="radio", name="percentage")
+                .radio__text 50%
+              label.radio__btn
+                input#percentage-3(type="radio", name="percentage")
+                .radio__text 50%
+              label.radio__btn
+                input#percentage-4(type="radio", name="percentage", for="user__val-1")
+                .radio__text
+                  label.user__val
+                    input#user__val-1(type="text", placeholder="Your variant", disabled name="user__val-1")
+            .form-block__wrapper
+              h3.form__title How many levels of the referral program are needed?
+              label.radio__btn
+                input#level-1(type="radio", name="level")
+                .radio__text 1
+              label.radio__btn
+                input#level-2(type="radio", name="level")
+                .radio__text 2
+              label.radio__btn
+                input#level-3(type="radio", name="level")
+                .radio__text 3
+              label.radio__btn
+                input#level-4(type="radio", name="level", for="user__val-2")
+                .radio__text
+                  label.user__val
+                    input#user__val-2(type="text", placeholder="Your variant", disabled name="user__val-2")
+            .form-block__wrapper.email__wrapper
+              span.form__description Take your email and we give you beta version our exchange wallet
+
+              label.email__field
+                input#email(type="email", placeholder="Your Email", name="email")
+                button(type="submit") Done
 
   include pug_components/footer.pug
   include pug_components/scripts.pug

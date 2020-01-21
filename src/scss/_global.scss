@@ -9,12 +9,14 @@ html{
 html, body{
   height: 100%;
   position: relative;
+  width: 100vw;
+  overflow-x: hidden;
 }
 
 body{
   font-family: 'Roboto', sans-serif;
   font-size: 18px;
-  color: #000;
+  color: $textcolor;
 }
 
 ul, ol, li {
@@ -25,4 +27,21 @@ ul, ol, li {
 
 a{
   text-decoration: none;
+  color: $textcolor;
+  &:focus{
+    outline: $green 1px dotted;
+  }
+  &:visited{
+    color: $textcolor;
+  }
+}
+
+input, button{
+  outline: none;
+}
+
+.container{
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto 0 0;
 }

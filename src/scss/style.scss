@@ -29,6 +29,7 @@
     align-items: center;
     height: 86px;
     width: 100%;
+    margin-left: 24px;
   }
 
   &__burger-menu,
@@ -81,7 +82,8 @@
       bottom: 0;
       left: 0;
       transition: color .5s;
-      &:hover{
+
+      &:hover {
         color: $green;
       }
     }
@@ -92,20 +94,16 @@
       color: $green;
       left: 0;
 
-      &::before,
-      &::after {
+      &::before {
         content: "";
         position: absolute;
-        height: 1px;
+        height: 6px;
         width: 6px;
-        background-color: $green;
+        border-left: 1px solid $green;
+        border-bottom: 1px solid $green;
         bottom: -10px;
-        transform: rotate(45deg) translateX(-50%);
+        transform: rotate(-45deg) translateX(-50%);
         left: 50%;
-      }
-
-      &::before {
-        transform: rotate(-45deg) translateX(50%);
       }
     }
   }
@@ -149,8 +147,321 @@
 }
 
 
+// -------------------------------------- TOPSCREEN --------------------------------------
+
+.topscreen {
+  height: 100vh;
+  max-width: 100vw;
+  overflow-x: hidden;
+  margin-top: 33px;
+
+  &__title-wrapper {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 165px;
+    align-items: center;
+    margin-bottom: 65px;
+  }
+
+  &__title {
+    position: relative;
+    font-size: 48px;
+    font-weight: 700;
+    font-family: Poppins, sans-serif;
+    margin: 0 20px 30px 0;
+    max-width: 255px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 2px;
+      height: 4px;
+      width: 100px;
+      background-color: $green;
+    }
+  }
+
+  &__img-top {
+    height: 100%;
+    width: 100%;
+    max-width: 950px;
+  }
+
+  &__content-wrapper {
+    margin-left: 165px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  &__text-wrapper {
+    margin-top: 40px;
+  }
+
+  &__text {
+    max-width: 440px;
+  }
+
+  &__link {
+    margin-top: 28px;
+    font-family: Montserrat;
+    font-weight: 700;
+    font-size: 20px;
+    margin-left: 23px;
+    padding-left: 27px;
+    position: relative;
+    color: #000000;
+
+    &::before {
+      content: "";
+      position: absolute;
+      height: 8px;
+      width: 8px;
+      border-left: 2px solid #000000;
+      border-bottom: 2px solid #000000;
+      top: 50%;
+      left: 8px;
+      transform: rotate(-45deg) translateY(-100%);
+    }
+  }
+}
 
 
+// -------------------------------------- FORM-SECTION --------------------------------------
+.form-section {
+  margin-left: 165px;
+  margin-bottom: 50px;
+}
+
+.form-block__wrapper {
+  margin-top: 60px;
+
+  &:first-child {
+    margin-top: 0;
+  }
+
+}
+
+.form__title {
+  line-height: 24px;
+  font-weight: 700;
+  margin-bottom: 43px;
+}
+
+.radio__btn {
+  display: block;
+  margin-bottom: 16px;
+  position: relative;
+  margin-left: 120px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  input[type="radio"] {
+    margin-right: 18px;
+    position: absolute;
+    opacity: 0;
+    width: 22px;
+    height: 100%;
+    z-index: -1;
+  }
+
+  .radio__text {
+    padding-left: 40px;
+
+    &:before,
+    &:after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      border-radius: 50%;
+    }
+
+    &:before {
+      height: 22px;
+      width: 22px;
+      border: 1px solid $darkgreen;
+      left: 0;
+    }
+  }
+
+  & input[type="radio"]:focus+.radio__text:before {
+    box-shadow: 0 0 0 3px rgba(86, 165, 75, .7);
+  }
+
+  & input[type="radio"]:checked+.radio__text:after {
+    height: 10px;
+    width: 10px;
+    background-color: $green;
+    top: 50%;
+    left: 6px;
+    transform: translateY(-50%);
+  }
+
+  & input[type="text"] {
+    width: 50%;
+    border: none;
+    border-bottom: 1px solid $darkgreen;
+    padding-bottom: 9px;
+
+    &::placeholder {
+      font-size: 14px;
+      color: $darkgreen;
+    }
+  }
+}
+
+.email__wrapper {
+  margin-top: 120px;
+  margin-left: 95px;
+  max-width: 1015px;
+}
+
+.form__description {
+  display: block;
+  font-size: 14px;
+  max-width: 350px;
+  margin-bottom: 34px;
+}
+
+.email__field {
+  display: flex;
+  justify-content: flex-start;
+  height: 100%;
+
+  input {
+    width: 50%;
+    max-width: 475px;
+    border: none;
+    border-bottom: 1px solid $darkgreen;
+
+    &::placeholder {
+      font-size: 14px;
+    }
+  }
+
+  button {
+    text-align: center;
+    font-weight: 700;
+    width: 255px;
+    height: 60px;
+    border: 3px solid $lightgrey;
+    background-color: #fff;
+    margin-left: auto;
+    margin-right: 30px;
+
+    &:active {
+      border: 3px solid $darkgreen;
+    }
+  }
+}
+
+// -------------------------------------- FOOTER --------------------------------------
+.footer {
+  &__top {
+    &-section {
+      background-color: #fff;
+      margin-bottom: -20px;
+    }
+
+    &-title {
+      color: $lightgrey;
+      font-size: 80px;
+      font-family: Montserrat;
+      letter-spacing: -3.87px;
+      text-align: center;
+      display: block;
+      font-weight: 700;
+    }
+  }
+
+  &__main-section {
+    background-color: $lightgrey;
+    padding-top: 35px;
+    padding-bottom: 20px;
+  }
+
+  &__btn {
+    width: 325px;
+    height: 60px;
+    margin: 0 auto;
+    background-color: $green;
+    margin-bottom: 39px;
+
+    &-link {
+      padding: 18px 53px;
+      display: block;
+      font-family: Montserrat;
+      font-weight: 700;
+      color: #ffffff;
+      font-size: 20px;
+    }
+  }
+
+  &__menu-wrapper {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 165px;
+    width: 100%;
+    max-width: 980px;
+  }
+
+  &__menu-item {
+    max-width: 150px;
+    margin-right: 30px;
+  }
+
+  &__item-title {
+    font-family: Montserrat;
+    font-weight: 500;
+    margin-bottom: 15px;
+  }
+
+  &-item__list li {
+    margin: 7px 0;
+
+    a {
+      font-size: 14px;
+      color: #4a4a4a;
+    }
+  }
+
+  &__social-list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    li {
+      width: 33%;
+      margin-bottom: 27px;
+      a:before{
+        font-family: 'icomoon';
+        color: $textcolor;
+        transition: all .5s;
+      }
+      .icon-facebook:hover:before{
+        color: #4267b2;
+      }
+      .icon-github:hover:before{
+        color: #24292e;
+      }
+      .icon-twitter:hover:before{
+        color: #1da1f2;
+        ;
+      }
+
+    }
+  }
+
+  &__copyright{
+    margin: 67px 0 0 165px;
+    font-size: 14px;
+    color: #4e4e4e;
+  }
+}
 
 
 //-----------------------------------------------------------------------------------------------------------
