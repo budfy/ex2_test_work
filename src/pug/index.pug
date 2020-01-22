@@ -19,19 +19,19 @@ html(lang="en")
     section.form-section#form-section
       .container
         .form__wrapper
-          form(action="" name="referral" onsubmit="valid()")
+          form(action="" name="referral")
             .form-block__wrapper
               h3.form__title What is the desired percentage of the reward for the inviting user?
               label.radio__btn
-                input#percentage-1(type="radio", name="percentage")
-                .radio__text 50%
+                input#percentage-1(type="radio", name="percentage" value="10%")
+                .radio__text 10%
               label.radio__btn
-                input#percentage-2(type="radio", name="percentage")
-                .radio__text 50%
+                input#percentage-2(type="radio", name="percentage" value="20%")
+                .radio__text 20%
               label.radio__btn
-                input#percentage-3(type="radio", name="percentage")
-                .radio__text 50%
-              label.radio__btn
+                input#percentage-3(type="radio", name="percentage" value="30%")
+                .radio__text 30%
+              label.radio__btn.percentage__custom
                 input#percentage-4(type="radio", name="percentage", for="user__val-1")
                 .radio__text
                   label.user__val
@@ -39,15 +39,15 @@ html(lang="en")
             .form-block__wrapper
               h3.form__title How many levels of the referral program are needed?
               label.radio__btn
-                input#level-1(type="radio", name="level")
+                input#level-1(type="radio", name="level" value="1")
                 .radio__text 1
               label.radio__btn
-                input#level-2(type="radio", name="level")
+                input#level-2(type="radio", name="level" value="2")
                 .radio__text 2
               label.radio__btn
-                input#level-3(type="radio", name="level")
+                input#level-3(type="radio", name="level" value="3")
                 .radio__text 3
-              label.radio__btn
+              label.radio__btn.level__custom
                 input#level-4(type="radio", name="level", for="user__val-2")
                 .radio__text
                   label.user__val

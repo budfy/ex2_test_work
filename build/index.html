@@ -47,22 +47,22 @@
     <section class="form-section" id="form-section">
       <div class="container">
         <div class="form__wrapper">
-          <form action="" name="referral" onsubmit="valid()">
+          <form action="" name="referral">
             <div class="form-block__wrapper">
               <h3 class="form__title">What is the desired percentage of the reward for the inviting user?</h3>
               <label class="radio__btn">
-                <input id="percentage-1" type="radio" name="percentage"/>
-                <div class="radio__text">50%</div>
+                <input id="percentage-1" type="radio" name="percentage" value="10%"/>
+                <div class="radio__text">10%</div>
               </label>
               <label class="radio__btn">
-                <input id="percentage-2" type="radio" name="percentage"/>
-                <div class="radio__text">50%</div>
+                <input id="percentage-2" type="radio" name="percentage" value="20%"/>
+                <div class="radio__text">20%</div>
               </label>
               <label class="radio__btn">
-                <input id="percentage-3" type="radio" name="percentage"/>
-                <div class="radio__text">50%</div>
+                <input id="percentage-3" type="radio" name="percentage" value="30%"/>
+                <div class="radio__text">30%</div>
               </label>
-              <label class="radio__btn">
+              <label class="radio__btn percentage__custom">
                 <input id="percentage-4" type="radio" name="percentage" for="user__val-1"/>
                 <div class="radio__text">
                   <label class="user__val">
@@ -74,18 +74,18 @@
             <div class="form-block__wrapper">
               <h3 class="form__title">How many levels of the referral program are needed?</h3>
               <label class="radio__btn">
-                <input id="level-1" type="radio" name="level"/>
+                <input id="level-1" type="radio" name="level" value="1"/>
                 <div class="radio__text">1</div>
               </label>
               <label class="radio__btn">
-                <input id="level-2" type="radio" name="level"/>
+                <input id="level-2" type="radio" name="level" value="2"/>
                 <div class="radio__text">2</div>
               </label>
               <label class="radio__btn">
-                <input id="level-3" type="radio" name="level"/>
+                <input id="level-3" type="radio" name="level" value="3"/>
                 <div class="radio__text">3</div>
               </label>
-              <label class="radio__btn">
+              <label class="radio__btn level__custom">
                 <input id="level-4" type="radio" name="level" for="user__val-2"/>
                 <div class="radio__text">
                   <label class="user__val">
